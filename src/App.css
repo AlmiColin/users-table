@@ -36,3 +36,136 @@
     transform: rotate(360deg);
   }
 }
+
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 25px;
+  vertical-align: text-top;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-mark {
+  display: inline-block;
+  height: 23px;
+  width: 23px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+.checkbox-container:hover input ~ .checkbox-mark {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkbox-mark {
+  background-color: #1aacd3;
+  border-color: #1aacd3;
+}
+
+.checkbox-mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkbox-mark:after {
+  display: block;
+}
+
+.checkbox-container .checkbox-mark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.users-page {
+  margin: 100px auto;
+  width: 1000px;
+}
+
+.users-table {
+  width: 100%;
+}
+
+.users-table th {
+  background-color: #61dafb;
+  padding: 0 10px;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.users-table td {
+  background-color: #efefef;
+  line-height: 30px;
+}
+
+.users-table td > input {
+  border: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  outline: 0;
+  padding: 10px 15px;
+  width: 100%;
+  background-color: inherit;
+}
+
+.users-table tr:nth-child(even) td {
+  background-color: #e0e0e0;
+}
+
+.button {
+  background-color: #99ef96;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  color: #08471c;
+  cursor:pointer;
+  padding: 10px 12px;
+  transition:0.3s;
+}
+
+.button:hover {
+  background-color: #63da5f;
+}
+
+.buttonContainer {
+  text-align: end;
+}    
+
+.search-user input {
+    width: 100%;
+    background-color: #cef4fe;
+    border: 2px solid white;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.search-user input::placeholder {
+  color:#1aacd3;
+}
+
+.fixed-centred-column {
+  text-align: center;
+  width: 80px;
+}
